@@ -35,12 +35,16 @@ function checker(input) {
     for (let index = 0; index < loc.length; index++) {
       loc[index].style.opacity = "1";
     }
+
     $("body").css("background-color", "red");
+
     var aud = new Audio(sound[4]);
     aud.play();
+
     setTimeout(() => {
       $("body").css("background-color", "#011F3F");
     }, 200);
+
     flag = 0;
   }
   if (i === seq.length) {
@@ -49,6 +53,7 @@ function checker(input) {
       glowSeq(seq[seq.length - 1]);
       var audi = new Audio(sound[seq[seq.length - 1]]);
       audi.play();
+      
     }, 1000);
 
     score += 10;
