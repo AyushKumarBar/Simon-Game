@@ -15,20 +15,17 @@ var sound = [
 
 function randomSequence() {
   rand = Math.floor(Math.random() * 4);
-  console.log(rand);
+
   seq.push(rand);
 }
 var index;
 var loc = document.querySelectorAll(".btnn");
-
-// console.log( loc[input-1]);
 
 function glowSeq(input) {
   loc[input].style.opacity = "0.5";
 }
 
 function checker(input) {
-  console.log(seq);
   if (seq[i] === input) {
     i++;
   } else {
@@ -53,7 +50,6 @@ function checker(input) {
       glowSeq(seq[seq.length - 1]);
       var audi = new Audio(sound[seq[seq.length - 1]]);
       audi.play();
-      
     }, 1000);
 
     score += 10;
@@ -63,7 +59,6 @@ function checker(input) {
       loc[seq[seq.length - 1]].style.opacity = "1";
     }, 1200);
 
-    console.log("new" + seq);
     i = 0;
   }
   if (score > highscore) {
