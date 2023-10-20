@@ -22,8 +22,11 @@ var index;
 var loc = document.querySelectorAll(".btnn");
 
 function glowSeq(input) {
-  loc[input].style.opacity = "0.5";
+  loc[input].style.opacity = "0.2";
+  // loc[input].style.backgroundColor = "#2e2929ce";
+  
 }
+
 
 function checker(input) {
   if (seq[i] === input) {
@@ -39,7 +42,7 @@ function checker(input) {
     aud.play();
 
     setTimeout(() => {
-      $("body").css("background-color", "#011F3F");
+      $("body").css("background-color", "#fff");
     }, 200);
 
     flag = 0;
